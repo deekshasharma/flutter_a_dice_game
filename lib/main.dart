@@ -12,17 +12,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Dice Game Demo',
         home: Scaffold(
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.green,
             appBar: AppBar(
               title: const Text('Dice Game'),
-              backgroundColor: Colors.red,
+              backgroundColor: Colors.greenAccent,
             ),
             body: Center(
                 child: Row(
-                  children: [
-                    Expanded(child: Image.asset('images/dice1.png')),
-                    Expanded(child: Image.asset('images/dice2.png')),
-                  ],
-                ))));
+              children: [
+                Expanded(
+                    child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Image.asset('images/dice1.png'))),
+                Expanded(
+                    child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Image.asset('images/dice2.png'))),
+              ],
+            ))));
   }
 }
